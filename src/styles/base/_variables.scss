@@ -1,0 +1,293 @@
+$primaryColor: #4D4D4D;
+$backgroundColor: #212121;
+$colorWhite: #FFFFFF;
+
+
+/* COLORES */
+$brandPrimary:#594794;
+$brandSecondary:#31ECB4;
+$color-neutral-900:#222222;
+$color-neutral-300:#CCCCCC;
+$color-neutral-800:#333333;
+$color-neutral-200:#E0E0E0;
+$color-neutral-700:#474747;
+$color-neutral-100:#EBEBEB;
+$color-neutral-600:#5C5C5C;
+$color-neutral-50:#FAFAFA;
+$color-neutral-500:#707070;
+$color-neutral-400:#A3A3A3;
+$color-accent-900:#211B37;
+$color-accent-300:#9F8FCC;
+$color-accent-800:#292145;
+$color-accent-200:#B7ABD8;
+$color-accent-700:#3A2E60;
+$color-accent-100:#CFC7E5;
+$color-accent-600:#4B3C7C;
+$color-accent-50:#E7E3F2;
+$color-accent-500:#594794;
+$color-accent-400:#7B65B8;
+$color-success-900:#053829;
+$color-success-300:#7EF1CE;
+$color-success-800:#0A7052;
+$color-success-200:#A3F5DC;
+$color-success-700:#11BB88;
+$color-success-100:#C8F9EA;
+$color-success-600:#15E0A3;
+$color-success-50:#ECFDF8;
+$color-success-500:#31ECB4;
+$color-success-400:#5AEDC1;
+$color-error-900:#A61D28;
+$color-error-400:#E04F58;
+$color-error-800:#B62632;
+$color-error-300:#D67077;
+$color-error-700:#C32C39;
+$color-error-200:#E4979D;
+$color-error-600:#D5353F;
+$color-error-100:#F7CBD3;
+$color-error-500:#E43E42;
+$color-error-50:#FCEAEE;
+$color-info-900:#0F477B;
+$color-info-400:#2DA5E6;
+$color-info-800:#18558E;
+$color-info-300:#3EB3EA;
+$color-info-700:#2075B0;
+$color-info-200:#85D2F3;
+$color-info-600:#2385C4;
+$color-info-100:#B4E4F8;
+$color-info-500:#2998D8;
+$color-info-50:#E1F4FC;
+$color-warning-900:#722808;
+$color-warning-400:#F28454;
+$color-warning-800:#98360B;
+$color-warning-300:#F59F7A;
+$color-warning-700:#BE430E;
+$color-warning-200:#F8BAA0;
+$color-warning-600:#E45011;
+$color-warning-100:#FBD6C6;
+$color-warning-500:#EF6226;
+$color-warning-50:#FEF1EC;
+/* FUENTES */
+@mixin primary-4XL-bold
+{
+font-family:IBM Plex Sans;
+font-size:4.9rem;
+font-weight:700;
+line-height:7.2rem;
+}
+@mixin primary-4XL-regular
+{
+font-family:IBM Plex Sans;
+font-size:4.9rem;
+font-weight:400;
+line-height:7.2rem;
+}
+@mixin secondary-4XL-bold
+{
+font-family:IBM Plex Mono;
+font-size:4.9rem;
+font-weight:700;
+line-height:7.2rem;
+}
+@mixin secondary-4XL-regular
+{
+font-family:IBM Plex Mono;
+font-size:4.9rem;
+font-weight:400;
+line-height:7.2rem;
+}
+@mixin primary-3XL-bold
+{
+font-family:IBM Plex Sans;
+font-size:4rem;
+font-weight:700;
+line-height:5.6rem;
+}
+@mixin secondary-3XL-bold
+{
+font-family:IBM Plex Mono;
+font-size:4rem;
+font-weight:700;
+line-height:5.6rem;
+}
+@mixin primary-3XL-regular
+{
+font-family:IBM Plex Sans;
+font-size:4rem;
+font-weight:400;
+line-height:5.6rem;
+}
+@mixin secondary-3XL-regular
+{
+font-family:IBM Plex Mono;
+font-size:4rem;
+font-weight:400;
+line-height:5.6rem;
+}
+@mixin primary-2XL-bold
+{
+font-family:IBM Plex Sans;
+font-size:3.1rem;
+font-weight:700;
+line-height:3.6rem;
+}
+@mixin secondary-2XL-bold
+{
+font-family:IBM Plex Mono;
+font-size:3.1rem;
+font-weight:700;
+line-height:3.6rem;
+}
+@mixin primary-2XL-regular
+{
+font-family:IBM Plex Sans;
+font-size:3.1rem;
+font-weight:400;
+line-height:3.6rem;
+}
+@mixin secondary-2XL-regular
+{
+font-family:IBM Plex Mono;
+font-size:3.1rem;
+font-weight:400;
+line-height:3.6rem;
+}
+@mixin primary-XL-bold
+{
+font-family:IBM Plex Sans;
+font-size:2.5rem;
+font-weight:700;
+line-height:3.6rem;
+}
+@mixin secondary-XL-bold
+{
+font-family:IBM Plex Mono;
+font-size:2.5rem;
+font-weight:700;
+line-height:3.6rem;
+}
+@mixin primary-XL-regular
+{
+font-family:IBM Plex Sans;
+font-size:2.5rem;
+font-weight:400;
+line-height:3.6rem;
+}
+@mixin secondary-XL-regular
+{
+font-family:IBM Plex Mono;
+font-size:2.5rem;
+font-weight:400;
+line-height:3.6rem;
+}
+@mixin primary-L-bold
+{
+font-family:IBM Plex Sans;
+font-size:2rem;
+font-weight:700;
+line-height:2.8rem;
+}
+@mixin secondary-L-bold
+{
+font-family:IBM Plex Mono;
+font-size:2rem;
+font-weight:700;
+line-height:2.8rem;
+}
+@mixin primary-L-regular
+{
+font-family:IBM Plex Sans;
+font-size:2rem;
+font-weight:400;
+line-height:2.8rem;
+}
+@mixin secondary-L-regular
+{
+font-family:IBM Plex Mono;
+font-size:2rem;
+font-weight:400;
+line-height:2.8rem;
+}
+@mixin primary-M-bold
+{
+font-family:IBM Plex Sans;
+font-size:1.6rem;
+font-weight:700;
+line-height:2.4rem;
+}
+@mixin secondary-M-bold
+{
+font-family:IBM Plex Mono;
+font-size:1.6rem;
+font-weight:700;
+line-height:2.4rem;
+}
+@mixin primary-M-regular
+{
+font-family:IBM Plex Sans;
+font-size:1.6rem;
+font-weight:400;
+line-height:2.4rem;
+}
+@mixin secondary-M-regular
+{
+font-family:IBM Plex Mono;
+font-size:1.6rem;
+font-weight:400;
+line-height:2.4rem;
+}
+@mixin primary-S-bold
+{
+font-family:IBM Plex Sans;
+font-size:1.3rem;
+font-weight:700;
+line-height:2rem;
+}
+@mixin secondary-S-bold
+{
+font-family:IBM Plex Mono;
+font-size:1.3rem;
+font-weight:700;
+line-height:2rem;
+}
+@mixin primary-S-regular
+{
+font-family:IBM Plex Sans;
+font-size:1.3rem;
+font-weight:400;
+line-height:2rem;
+}
+@mixin secondary-S-regular
+{
+font-family:IBM Plex Mono;
+font-size:1.3rem;
+font-weight:400;
+line-height:2rem;
+}
+@mixin primary-XS-bold
+{
+font-family:IBM Plex Sans;
+font-size:1rem;
+font-weight:700;
+line-height:1.6rem;
+}
+@mixin secondary-XS-bold
+{
+font-family:IBM Plex Mono;
+font-size:1rem;
+font-weight:700;
+line-height:1.6rem;
+}
+@mixin primary-XS-regular
+{
+font-family:IBM Plex Sans;
+font-size:1rem;
+font-weight:400;
+line-height:1.6rem;
+}
+@mixin secondary-XS-regular
+{
+font-family:IBM Plex Mono;
+font-size:1rem;
+font-weight:400;
+line-height:1.6rem;
+}
