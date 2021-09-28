@@ -19,20 +19,28 @@
     background: $color-accent-700;
   }
 
+  &:focus {
+    border: 0.4rem solid $color-accent-100;
+  }
+
   &:disabled {
     opacity: 0.5;
   }
 
   &--state-destructive {
     background: $color-error-500;
-  }
 
-  &--state-destructive:hover {
-    background: $color-error-400;
-  }
+    &:hover {
+      background: $color-error-400;
+    }
 
-  &--state-destructive:active {
-    background: $color-error-700;
+    &:active {
+      background: $color-error-700;
+    }
+
+    &:focus {
+      border: 0.4rem solid $color-error-100;
+    }
   }
 
   &--state-loading {
@@ -53,5 +61,78 @@
   &__text__label {
     @include primary-M-regular;
     color: $color-neutral-50;
+  }
+}
+
+.button-secondary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.2rem 3.2rem;
+  box-shadow: 0rem 0.2rem 0.4rem -0.6rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
+  border: 0.1rem solid $color-neutral-100;
+  box-sizing: border-box;
+  background: $colorWhite;
+
+  &:hover {
+    background: $color-neutral-50;
+  }
+
+  &:active {
+    background: $color-accent-50;
+  }
+
+  &:focus {
+    border: 0.4rem solid $color-neutral-100;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &--state-destructive {
+    background: $colorWhite;
+    border: 0.1rem solid $color-error-500;
+    color: $color-error-500;
+
+    &:hover {
+      background: $color-neutral-50;
+    }
+
+    &:focus {
+      border: 0.4rem solid $color-error-100;
+    }
+
+    &:active {
+      background: $color-error-50;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text__icon {
+    font-size: 2.4rem;
+
+    color: $color-accent-500;
+
+    &--state-destructive {
+      font-size: 2.4rem;
+      color: $color-error-500;
+    }
+  }
+
+  &__text__label {
+    @include primary-M-regular;
+    color: $color-accent-500;
+
+    &--state-destructive {
+      @include primary-M-regular;
+      color: $color-error-500;
+    }
   }
 }

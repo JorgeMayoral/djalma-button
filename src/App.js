@@ -20,12 +20,23 @@ function App() {
       }}
     >
       <h1 style={{fontSize: "3rem"}}>{counter}</h1>
-      <Button label="Primary Button" onClick={handleClick} />
-      <Button label="Primary Button Disabled" disabled />
-      <Button label="Loading Button" loading />
-      <Button label="Destructive Button" destructive />
-      <Button label="Destructive Button Disabled" destructive disabled />
-      <Button label="Destructive Button Loading" destructive loading />
+      <div style={{paddingBottom: "3rem"}}>
+        <h2 style={{fontSize: "1.5rem"}}>Primary Buttons</h2>
+        <Button label="Primary Button" onClick={handleClick} />
+        <Button label="Primary Button Disabled" disabled onClick={handleClick} />
+        <Button label="Loading Button" loading onClick={handleClick} />
+        <Button label="Destructive Button" destructive onClick={handleClick} />
+        <Button label="Destructive Button Disabled" destructive disabled onClick={handleClick} />
+        <Button label="Destructive Button Loading" destructive loading onClick={handleClick} />
+      </div>
+      
+      <div style={{paddingBottom: "3rem"}}>
+        <h2 style={{fontSize: "1.5rem"}}>Secondary Buttons</h2>
+        <Button label="Primary Button" type="secondary" onClick={handleClick} />
+        <Button label="Primary Button Disabled" disabled type="secondary" onClick={handleClick} />
+        <Button label="Destructive Button" destructive type="secondary" onClick={handleClick} />
+        <Button label="Destructive Button Disabled" destructive disabled type="secondary" onClick={handleClick} />
+      </div>
     </div>
   );
 }
