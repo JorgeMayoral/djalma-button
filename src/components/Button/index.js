@@ -4,12 +4,12 @@ import './style.scss';
 const Button = ({ label, destructive = false, loading = false, ...props }) => {
   const [isClicked, setIsClicked] = useState(false);
 
-  const icon = `icon ${
+  const icon = `button__text__icon ${
     loading ? 'icon-arrow-sync' : destructive ? 'icon-delete' : 'icon-circle'
   }`;
 
-  const className = `${destructive ? 'destructive' : 'primary'} ${
-    loading && 'loading'
+  const className = `button ${destructive && 'button--state-destructive'} ${
+    loading && 'button--state-loading'
   } ${isClicked && 'clicked'}`;
 
   return (
@@ -17,11 +17,10 @@ const Button = ({ label, destructive = false, loading = false, ...props }) => {
       className={className}
       type="button"
       {...props}
-      onClick={() => setIsClicked(true)}
     >
-      <div className="layout">
+      <div className="button__text">
         <div className={icon} />
-        <div className="label">{label}</div>
+        <div className="button__text__label">{label}</div>
       </div>
     </button>
   );
