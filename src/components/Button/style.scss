@@ -15,6 +15,10 @@
   background: $color-accent-400;
 }
 
+.button:active {
+  background: $color-accent-700;
+}
+
 .button:disabled {
   opacity: 0.5;
 }
@@ -25,6 +29,10 @@
 
 .button--state-destructive:hover {
   background: $color-error-400;
+}
+
+.button--state-destructive:active {
+  background: $color-error-700;
 }
 
 .button--state-loading {
