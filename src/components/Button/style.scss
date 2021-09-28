@@ -1,58 +1,57 @@
 @import "../../styles/base/variables";
 
-.button {
+.button-primary {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  padding: 12px 32px;
-  box-shadow: 0px 2px 4px -6px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  padding: 1.2rem 3.2rem;
+  box-shadow: 0rem 0.2rem 0.4rem -0.6rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
+  border: none;
   background: $color-accent-500;
-}
 
-.button:hover {
-  background: $color-accent-400;
-}
+  &:hover {
+    background: $color-accent-400;
+  }
 
-.button:active {
-  background: $color-accent-700;
-}
+  &:active {
+    background: $color-accent-700;
+  }
 
-.button:disabled {
-  opacity: 0.5;
-}
+  &:disabled {
+    opacity: 0.5;
+  }
 
-.button--state-destructive {
-  background: $color-error-500;
-}
+  &--state-destructive {
+    background: $color-error-500;
+  }
 
-.button--state-destructive:hover {
-  background: $color-error-400;
-}
+  &--state-destructive:hover {
+    background: $color-error-400;
+  }
 
-.button--state-destructive:active {
-  background: $color-error-700;
-}
+  &--state-destructive:active {
+    background: $color-error-700;
+  }
 
-.button--state-loading {
-  opacity: 0.5;
-}
+  &--state-loading {
+    opacity: 0.5;
+  }
 
-.button__text {
-  display: flex;
-  flex-direction: row;
-}
+  &__text {
+    display: flex;
+    flex-direction: row;
+  }
 
-.button__text__icon {
-  color: $color-neutral-50;
-}
+  &__text__icon {
+    font-size: 2.4rem;
 
-.button__text__label {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+    color: $color-neutral-50;
+  }
 
-  color: $color-neutral-50;
+  &__text__label {
+    @include primary-M-regular;
+    color: $color-neutral-50;
+  }
 }
