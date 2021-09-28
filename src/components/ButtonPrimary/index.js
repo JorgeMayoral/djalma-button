@@ -1,5 +1,6 @@
 import "./style.scss";
 import PropTypes from "prop-types";
+import Icon from "../Icon";
 
 const proptypes = {
   label: PropTypes.string,
@@ -16,9 +17,12 @@ const ButtonPrimary = ({
   disabled = false,
   onClick,
 }) => {
-  const icon = `button-primary__text__icon ${
-    loading ? "icon-arrow-sync" : destructive ? "icon-delete" : "icon-circle"
-  }`;
+  const iconClass = `button-primary__text__icon `;
+  const icon = loading
+    ? "icon-arrow-sync"
+    : destructive
+    ? "icon-delete"
+    : "icon-circle";
 
   const className = `button-primary ${
     destructive && `button-primary--state-destructive`
@@ -32,7 +36,9 @@ const ButtonPrimary = ({
       disabled={disabled}
     >
       <div className={`button-primary__text`}>
-        <div className={icon} />
+        <div className={iconClass}>
+          <Icon icon={icon} />
+        </div>
         <div className={`button-primary__text__label`}>{label}</div>
       </div>
     </button>
