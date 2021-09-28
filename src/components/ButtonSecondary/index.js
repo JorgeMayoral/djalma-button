@@ -39,7 +39,7 @@ const ButtonSecondary = ({
     >
       <div className={`button-secondary__text`}>
         <div className={iconClass}>
-          <Icon icon={icon} />
+          <Icon icon={icon} color={destructive ? "error" : "accent"} />
         </div>
         <div
           className={`button-secondary__text__label${
