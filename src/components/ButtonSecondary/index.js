@@ -6,27 +6,25 @@ const proptypes = {
   destructive: PropTypes.bool,
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
-  type: PropTypes.string,
   onClick: PropTypes.func,
 };
 
-const Button = ({
+const ButtonSecondary = ({
   label,
   destructive = false,
   loading = false,
   disabled = false,
-  type = "primary",
   onClick,
 }) => {
-  const icon = `button-${type}__text__icon${
-    type === "secondary" && destructive ? "--state-destructive" : ""
+  const icon = `button-secondary__text__icon${
+    destructive ? "--state-destructive" : ""
   } ${
     loading ? "icon-arrow-sync" : destructive ? "icon-delete" : "icon-circle"
   }`;
 
-  const className = `button-${type} ${
-    destructive && `button-${type}--state-destructive`
-  } ${loading && `button-${type}--state-loading`}`;
+  const className = `button-secondary ${
+    destructive && `button-secondary--state-destructive`
+  }`;
 
   return (
     <button
@@ -35,11 +33,11 @@ const Button = ({
       onClick={() => onClick()}
       disabled={disabled}
     >
-      <div className={`button-${type}__text`}>
+      <div className={`button-secondary__text`}>
         <div className={icon} />
         <div
-          className={`button-${type}__text__label${
-            type === "secondary" && destructive ? "--state-destructive" : ""
+          className={`button-secondary__text__label${
+            destructive ? "--state-destructive" : ""
           }`}
         >
           {label}
@@ -49,6 +47,6 @@ const Button = ({
   );
 };
 
-Button.propTypes = proptypes;
+ButtonSecondary.propTypes = proptypes;
 
-export default Button;
+export default ButtonSecondary;
