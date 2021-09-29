@@ -1,4 +1,3 @@
-import "./style.scss";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
 

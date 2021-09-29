@@ -1,10 +1,12 @@
-
 // COMPONENTS
-@import './base/reset';
-@import './base/_fonts.scss';
-@import './base/icons';
-@import './base/_mixins.scss';
-@import './base/_variables.scss';
+@import "./base/reset";
+@import "./base/_fonts.scss";
+@import "./base/icons";
+@import "./base/_mixins.scss";
+@import "./base/_variables.scss";
+@import "./../components/ButtonPrimary/style.scss";
+@import "./../components/ButtonSecondary/style.scss";
+@import "./../components/Icon/style.scss";
 //@import './../components/forms/forms.scss';
 //@import './../components/basics/basics.scss';
 //@import './../components/navigation/navigation.scss';
