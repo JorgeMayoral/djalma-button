@@ -35,7 +35,7 @@ const ButtonPrimary = ({
       disabled={disabled}
     >
       <div className={iconClass}>
-        <Icon icon={icon} />
+        <Icon icon={icon} color="#FAFAFA" />
       </div>
       <div className={`button-primary__label`}>{label}</div>
     </button>

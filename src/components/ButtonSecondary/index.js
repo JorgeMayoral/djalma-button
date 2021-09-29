@@ -37,7 +37,7 @@ const ButtonSecondary = ({
       disabled={disabled}
     >
       <div className={iconClass}>
-        <Icon icon={icon} color={destructive ? "error" : "accent"} />
+        <Icon icon={icon} color={destructive ? "#E43E42" : "#594794"} />
       </div>
       <div
         className={`button-secondary__label${
