@@ -1,14 +1,17 @@
 .button-secondary {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 1.2rem 3.2rem;
-  box-shadow: 0rem 0.2rem 0.4rem -0.6rem rgba(0, 0, 0, 0.2);
-  border-radius: 0.8rem;
+
+  background: $colorWhite;
+
   border: 0.1rem solid $color-neutral-100;
   box-sizing: border-box;
-  background: $colorWhite;
+
+  box-shadow: 0rem 0.2rem 0.4rem -0.6rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
 
   &:hover {
     background: $color-neutral-50;
@@ -47,26 +50,66 @@
   &__text {
     display: flex;
     flex-direction: row;
-  }
-  /*
-  &__text__icon {
-    font-size: 2.4rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
 
-    color: $color-accent-500;
+    position: static;
+    left: 23.7%;
+    right: 23.7%;
+    top: 25%;
+    bottom: 25%;
 
-    &--state-destructive {
-      font-size: 2.4rem;
-      color: $color-error-500;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0rem 0rem;
+
+    &__icon {
+      position: static;
+      left: 0%;
+      right: 66.2%;
+      top: 0%;
+      bottom: 0%;
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      margin: 0rem 0.8rem;
     }
-  }
-*/
-  &__text__label {
-    @include primary-M-regular;
-    color: $color-accent-500;
 
-    &--state-destructive {
+    &__label {
+      position: static;
+      left: 45.07%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+
       @include primary-M-regular;
-      color: $color-error-500;
+      color: $color-accent-500;
+      text-align: center;
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+      margin: 0rem 0.8rem;
+
+      &--state-destructive {
+        position: static;
+        left: 45.07%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        @include primary-M-regular;
+        color: $color-error-500;
+        text-align: center;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        margin: 0rem 0.8rem;
+      }
     }
   }
 }
