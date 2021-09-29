@@ -18,53 +18,49 @@ function App() {
         justifyContent: "center",
         alignItems: "center",
         padding: "2rem",
+        gap: "1rem",
       }}
     >
-      <h1 style={{ fontSize: "3rem" }}>{counter}</h1>
-      <div style={{ paddingBottom: "3rem" }}>
-        <h2 style={{ fontSize: "1.5rem" }}>Primary Buttons</h2>
-        <ButtonPrimary label="Button" onClick={handleClick} />
-        <ButtonPrimary label="Button Disabled" disabled onClick={handleClick} />
-        <ButtonPrimary label="Loading Button" loading onClick={handleClick} />
-        <ButtonPrimary
-          label="Destructive Button"
-          destructive
-          onClick={handleClick}
-        />
-        <ButtonPrimary
-          label="Destructive Button Disabled"
-          destructive
-          disabled
-          onClick={handleClick}
-        />
-        <ButtonPrimary
-          label="Destructive Button Loading"
-          destructive
-          loading
-          onClick={handleClick}
-        />
-      </div>
+      <h1 style={{ fontSize: "5rem" }}>{counter}</h1>
 
-      <div style={{ paddingBottom: "3rem" }}>
-        <h2 style={{ fontSize: "1.5rem" }}>Secondary Buttons</h2>
-        <ButtonSecondary label="Button" onClick={handleClick} />
-        <ButtonSecondary
-          label="Button Disabled"
-          disabled
-          onClick={handleClick}
-        />
-        <ButtonSecondary
-          label="Destructive Button"
-          destructive
-          onClick={handleClick}
-        />
-        <ButtonSecondary
-          label="Destructive Button Disabled"
-          destructive
-          disabled
-          onClick={handleClick}
-        />
-      </div>
+      <h2 style={{ fontSize: "2rem" }}>Primary Buttons</h2>
+      <ButtonPrimary label="Button" onClick={handleClick} />
+      <ButtonPrimary label="Button Disabled" disabled onClick={handleClick} />
+      <ButtonPrimary label="Loading Button" loading onClick={handleClick} />
+      <ButtonPrimary
+        label="Destructive Button"
+        destructive
+        onClick={handleClick}
+      />
+      <ButtonPrimary
+        label="Destructive Button Disabled"
+        destructive
+        disabled
+        onClick={handleClick}
+      />
+      <ButtonPrimary
+        label="Destructive Button Loading"
+        destructive
+        loading
+        onClick={handleClick}
+      />
+
+      <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>
+        Secondary Buttons
+      </h2>
+      <ButtonSecondary label="Button" onClick={handleClick} />
+      <ButtonSecondary label="Button Disabled" disabled onClick={handleClick} />
+      <ButtonSecondary
+        label="Destructive Button"
+        destructive
+        onClick={handleClick}
+      />
+      <ButtonSecondary
+        label="Destructive Button Disabled"
+        destructive
+        disabled
+        onClick={handleClick}
+      />
     </div>
   );
 }
