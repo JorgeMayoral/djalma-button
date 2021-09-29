@@ -6,17 +6,22 @@ const proptypes = {
   color: PropTypes.string,
 };
 
+const sizes = {
+  medium: "2.4rem",
+  large: "4.8rem",
+};
+
 const colors = {
   neutral: "#FAFAFA",
   error: "#E43E42",
   accent: "#594794",
 };
 
-const Icon = ({ icon, size = "2.4rem", color = "neutral" }) => {
+const Icon = ({ icon, size = "medium", color = "neutral" }) => {
   return (
     <span
       className={`${icon}`}
-      style={{ fontSize: size, color: colors[color] }}
+      style={{ fontSize: sizes[size], color: colors[color] }}
     />
   );
 };

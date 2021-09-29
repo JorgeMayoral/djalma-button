@@ -1,6 +1,6 @@
 .button-secondary {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1.2rem 3.2rem;
@@ -47,38 +47,69 @@
     }
   }
 
-  &__icon {
+  &__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
     position: static;
-    left: 0%;
-    right: 66.2%;
-    top: 0%;
-    bottom: 0%;
+    left: 23.7%;
+    right: 23.7%;
+    top: 25%;
+    bottom: 25%;
 
     flex: none;
     order: 0;
     flex-grow: 0;
     margin: 0rem 0rem;
-  }
 
-  &__label {
-    @include primary-M-regular;
-    color: $color-accent-500;
-    text-align: center;
+    &__icon {
+      position: static;
+      left: 0%;
+      right: 66.2%;
+      top: 0%;
+      bottom: 0%;
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0rem 0.8rem;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      margin: 0rem 0.8rem;
+    }
 
-    &--state-destructive {
+    &__label {
+      position: static;
+      left: 45.07%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+
       @include primary-M-regular;
-      color: $color-error-500;
+      color: $color-accent-500;
       text-align: center;
 
       flex: none;
       order: 1;
       flex-grow: 0;
       margin: 0rem 0.8rem;
+
+      &--state-destructive {
+        position: static;
+        left: 45.07%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        @include primary-M-regular;
+        color: $color-error-500;
+        text-align: center;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        margin: 0rem 0.8rem;
+      }
     }
   }
 }
