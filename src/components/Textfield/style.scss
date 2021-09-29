@@ -21,7 +21,9 @@
 
   color: $color-neutral-900;
 
-  ::placeholder {
+  padding: 1rem 0.75rem;
+
+  &::placeholder {
     color: $color-neutral-300;
   }
 
