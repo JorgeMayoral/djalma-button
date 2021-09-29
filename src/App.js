@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ButtonPrimary from "./components/ButtonPrimary";
 import ButtonSecondary from "./components/ButtonSecondary";
+import Textfield from "./components/Textfield";
 import "./styles/main.scss";
 
 function App() {
@@ -61,6 +62,9 @@ function App() {
         disabled
         onClick={handleClick}
       />
+
+      <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>Textfield</h2>
+      <Textfield id="textfield1" label="Label" placeholder="e.g. Text" />
     </div>
   );
 }

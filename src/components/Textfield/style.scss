@@ -1,0 +1,31 @@
+.textfield-container {
+}
+
+.textfield-label {
+  @include primary-M-bold;
+}
+
+.textfield {
+  background: $colorWhite;
+
+  border: 0.1rem solid $color-neutral-100;
+  box-sizing: border-box;
+
+  box-shadow: 0rem 0.4rem 0.8rem -0.8rem black;
+  border-radius: 0.8rem;
+
+  @include primary-M-regular;
+
+  display: flex;
+  align-items: center;
+
+  color: $color-neutral-900;
+
+  ::placeholder {
+    color: $color-neutral-300;
+  }
+
+  &:focus {
+    outline: 0.1rem solid $color-accent-500;
+  }
+}
