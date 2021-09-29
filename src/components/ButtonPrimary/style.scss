@@ -1,6 +1,6 @@
 .button-primary {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 1.2rem 3.2rem;
@@ -47,52 +47,22 @@
     opacity: 0.5;
   }
 
-  &__text {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0rem;
-
-    position: static;
-    left: 23.7%;
-    right: 23.7%;
-    top: 25%;
-    bottom: 25%;
-
+  &__icon {
     flex: none;
     order: 0;
     flex-grow: 0;
     margin: 0rem 0rem;
+  }
 
-    &__icon {
-      position: static;
-      left: 0%;
-      right: 66.2%;
-      top: 0%;
-      bottom: 0%;
+  &__label {
+    @include primary-M-regular;
+    text-align: center;
 
-      flex: none;
-      order: 0;
-      flex-grow: 0;
-      margin: 0rem 0.8rem;
-    }
+    color: $color-neutral-50;
 
-    &__label {
-      position: static;
-      left: 45.07%;
-      right: 0%;
-      top: 0%;
-      bottom: 0%;
-
-      @include primary-M-regular;
-      text-align: center;
-
-      color: $color-neutral-50;
-
-      flex: none;
-      order: 1;
-      flex-grow: 0;
-      margin: 0rem 0.8rem;
-    }
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0rem 0.8rem;
   }
 }
