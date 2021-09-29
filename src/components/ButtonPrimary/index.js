@@ -16,7 +16,7 @@ const ButtonPrimary = ({
   disabled = false,
   onClick,
 }) => {
-  const iconClass = `button-primary__text__icon `;
+  const iconClass = `button-primary__icon `;
   const icon = loading
     ? "icon-arrow-sync"
     : destructive
@@ -34,12 +34,10 @@ const ButtonPrimary = ({
       onClick={() => onClick()}
       disabled={disabled}
     >
-      <div className={`button-primary__text`}>
-        <div className={iconClass}>
-          <Icon icon={icon} />
-        </div>
-        <div className={`button-primary__text__label`}>{label}</div>
+      <div className={iconClass}>
+        <Icon icon={icon} />
       </div>
+      <div className={`button-primary__label`}>{label}</div>
     </button>
   );
 };
