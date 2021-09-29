@@ -23,8 +23,12 @@ function App() {
       <h1 style={{ fontSize: "3rem" }}>{counter}</h1>
       <div style={{ paddingBottom: "3rem" }}>
         <h2 style={{ fontSize: "1.5rem" }}>Primary Buttons</h2>
-        <ButtonPrimary label="Button" onClick={handleClick} />
-        <ButtonPrimary label="Button Disabled" disabled onClick={handleClick} />
+        <ButtonPrimary label="Primary Button" onClick={handleClick} />
+        <ButtonPrimary
+          label="Primary Button Disabled"
+          disabled
+          onClick={handleClick}
+        />
         <ButtonPrimary label="Loading Button" loading onClick={handleClick} />
         <ButtonPrimary
           label="Destructive Button"
@@ -47,9 +51,9 @@ function App() {
 
       <div style={{ paddingBottom: "3rem" }}>
         <h2 style={{ fontSize: "1.5rem" }}>Secondary Buttons</h2>
-        <ButtonSecondary label="Button" onClick={handleClick} />
+        <ButtonSecondary label="Primary Button" onClick={handleClick} />
         <ButtonSecondary
-          label="Button Disabled"
+          label="Primary Button Disabled"
           disabled
           onClick={handleClick}
         />

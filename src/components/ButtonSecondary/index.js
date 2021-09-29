@@ -16,7 +16,7 @@ const ButtonSecondary = ({
   disabled = false,
   onClick,
 }) => {
-  const iconClass = `button-secondary__icon${
+  const iconClass = `button-secondary__text__icon${
     destructive ? "--state-destructive" : ""
   }`;
   const icon = loading
@@ -36,15 +36,17 @@ const ButtonSecondary = ({
       onClick={() => onClick()}
       disabled={disabled}
     >
-      <div className={iconClass}>
-        <Icon icon={icon} color={destructive ? "error" : "accent"} />
-      </div>
-      <div
-        className={`button-secondary__label${
-          destructive ? "--state-destructive" : ""
-        }`}
-      >
-        {label}
+      <div className={`button-secondary__text`}>
+        <div className={iconClass}>
+          <Icon icon={icon} color={destructive ? "error" : "accent"} />
+        </div>
+        <div
+          className={`button-secondary__text__label${
+            destructive ? "--state-destructive" : ""
+          }`}
+        >
+          {label}
+        </div>
       </div>
     </button>
   );
