@@ -20,6 +20,14 @@
     &--state-success {
       color: $color-success-700;
     }
+
+    &--size-small {
+      @include primary-S-regular;
+    }
+
+    &--size-large {
+      @include primary-L-regular;
+    }
   }
 
   &__container {
@@ -77,6 +85,14 @@
           color: $color-success-700;
         }
       }
+
+      &--size-small {
+        @include primary-S-regular;
+      }
+
+      &--size-large {
+        @include primary-L-regular;
+      }
     }
 
     &:hover {
@@ -126,6 +142,8 @@
   &__subtext {
     @include primary-S-regular;
 
+    height: 2rem;
+
     color: $color-neutral-500;
 
     &--state-error {
@@ -134,6 +152,16 @@
 
     &--state-success {
       color: $color-success-700;
+    }
+
+    &--size-small {
+      @include primary-XS-regular;
+      height: 1.6rem;
+    }
+
+    &--size-large {
+      @include primary-M-regular;
+      height: 2.4rem;
     }
   }
 }
