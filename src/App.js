@@ -64,7 +64,31 @@ function App() {
       />
 
       <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>Textfield</h2>
-      <Textfield id="textfield1" label="Label" placeholder="e.g. Text" />
+      <Textfield
+        id="textfield1"
+        label="Label"
+        placeholder="e.g. Text"
+        helpText="This would be some help text"
+        info
+      />
+      <Textfield
+        id="textfield1"
+        label="Disabled"
+        placeholder="e.g. Text"
+        disabled
+      />
+      <Textfield
+        id="textfield1"
+        label="Error"
+        placeholder="e.g. Text"
+        errorText="This would be some error text"
+      />
+      <Textfield
+        id="textfield1"
+        label="Success"
+        successText="This would be some success text"
+        value="Success"
+      />
     </div>
   );
 }

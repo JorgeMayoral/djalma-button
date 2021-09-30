@@ -1,33 +1,107 @@
-.textfield-container {
-}
-
-.textfield-label {
-  @include primary-M-bold;
-}
-
 .textfield {
-  background: $colorWhite;
-
-  border: 0.1rem solid $color-neutral-100;
-  box-sizing: border-box;
-
-  box-shadow: 0rem 0.4rem 0.8rem -0.8rem black;
-  border-radius: 0.8rem;
-
-  @include primary-M-regular;
-
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
-  color: $color-neutral-900;
-
-  padding: 1rem 0.75rem;
-
-  &::placeholder {
-    color: $color-neutral-300;
+  &--state-disabled {
+    opacity: 0.5;
   }
 
-  &:focus {
-    outline: 0.1rem solid $color-accent-500;
+  &__label {
+    @include primary-M-bold;
+
+    color: $color-neutral-900;
+
+    &--state-error {
+      color: $color-error-500;
+    }
+
+    &--state-success {
+      color: $color-success-700;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    &__input {
+      background: $colorWhite;
+
+      border: 0.1rem solid $color-neutral-100;
+      box-sizing: border-box;
+
+      box-shadow: 0rem 0.4rem 0.8rem -0.8rem black;
+      border-radius: 0.8rem;
+
+      @include primary-M-regular;
+
+      display: flex;
+      align-items: center;
+
+      color: $color-neutral-500;
+
+      padding: 1rem 0.75rem;
+
+      &::placeholder {
+        color: $color-neutral-300;
+      }
+
+      &:hover {
+        outline: 0.4rem solid $color-neutral-50;
+      }
+
+      &:focus {
+        color: $color-neutral-900;
+        border: 0.1rem solid $color-accent-500;
+        outline: 0.4rem solid $color-accent-50;
+      }
+
+      &--state-error {
+        background: $color-error-50;
+        border: 0.1rem solid $color-error-500;
+        color: $color-error-500;
+
+        &::placeholder {
+          color: $color-error-200;
+        }
+
+        &:focus {
+          border: 0.1rem solid $color-error-500;
+          outline: none;
+          color: $color-error-500;
+        }
+      }
+
+      &--state-success {
+        background: $color-success-50;
+        border: 0.1rem solid $color-success-500;
+        color: $color-success-700;
+
+        &:focus {
+          border: 0.1rem solid $color-success-500;
+          outline: none;
+          color: $color-success-700;
+        }
+      }
+    }
+
+    &__icon {
+    }
+  }
+
+  &__subtext {
+    @include primary-S-regular;
+
+    color: $color-neutral-500;
+
+    &--state-error {
+      color: $color-error-500;
+    }
+
+    &--state-success {
+      color: $color-success-700;
+    }
   }
 }
