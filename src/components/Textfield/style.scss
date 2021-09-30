@@ -126,6 +126,8 @@
   &__subtext {
     @include primary-S-regular;
 
+    height: 2rem;
+
     color: $color-neutral-500;
 
     &--state-error {
