@@ -34,7 +34,8 @@ const Textfield = ({
       <label
         htmlFor={id}
         className={`textfield__label 
-          textfield__label--state-${subtext.type}`}
+          textfield__label--state-${subtext.type}
+          textfield__label--size-${size}`}
       >
         {label}
       </label>
