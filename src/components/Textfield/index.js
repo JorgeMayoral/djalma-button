@@ -41,7 +41,11 @@ const Textfield = ({
       >
         {label}
       </label>
-      <div className="textfield__container">
+      <div
+        className={`textfield__container  ${
+          errorText ? "textfield__container--state-error" : ""
+        } ${successText ? "textfield__container--state-success" : ""}`}
+      >
         <input
           id={id}
           className={`textfield__container__input ${
