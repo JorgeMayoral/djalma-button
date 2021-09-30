@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
 
   &--state-disabled {
     opacity: 0.5;
@@ -23,10 +23,11 @@
   }
 
   &__container {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: minmax(90%, auto) minmax(0, 10%);
     align-items: center;
-
-    flex: 1 1;
+    justify-items: start;
+    justify-content: stretch;
 
     background: $colorWhite;
 
@@ -41,9 +42,6 @@
       border: none;
 
       @include primary-M-regular;
-
-      display: flex;
-      align-items: center;
 
       color: $color-neutral-500;
 
@@ -120,7 +118,8 @@
     }
 
     &__icon {
-      padding: 0.5rem;
+      justify-self: flex-end;
+      padding-right: 0.5rem;
     }
   }
 
