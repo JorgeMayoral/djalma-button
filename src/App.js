@@ -13,10 +13,10 @@ function App() {
   };
 
   const handleSetError = () => {
-    if (errorMsg.error) {
+    if (errorMsg.msg) {
       setErrorMsg({});
     } else {
-      setErrorMsg({ error: "Some error" });
+      setErrorMsg({ type: "error", msg: "Some error" });
     }
   };
 
@@ -77,7 +77,7 @@ function App() {
         id="textfield1"
         label="Label"
         placeholder="e.g. Text"
-        subtext={{ help: "This would be some help text" }}
+        subtext={{ type: "help", msg: "This would be some help text" }}
         info
       />
       <Textfield
@@ -96,16 +96,32 @@ function App() {
       <Textfield
         id="textfield4"
         label="Success"
-        subtext={{ success: "This would be some success text" }}
+        subtext={{ type: "success", msg: "This would be some success text" }}
         value="Success"
       />
       <Textfield
         id="textfield5"
+        label="Small"
+        placeholder="e.g. Text"
+        subtext={{ type: "help", msg: "This would be some help text" }}
+        info
+        size="small"
+      />
+      <Textfield
+        id="textfield6"
+        label="Medium"
+        placeholder="e.g. Text"
+        subtext={{ type: "help", msg: "This would be some help text" }}
+        info
+        size="medium"
+      />
+      <Textfield
+        id="textfield7"
         label="Large"
         placeholder="e.g. Text"
-        subtext={{ help: "This would be some help text" }}
+        subtext={{ type: "help", msg: "This would be some help text" }}
         info
-        size="50rem"
+        size="large"
       />
     </div>
   );

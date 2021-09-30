@@ -20,7 +20,7 @@ const Textfield = ({
   disabled,
   info,
   value,
-  size = "30rem",
+  size = "medium",
   subtext = {},
 }) => {
   const [inputValue, setInputValue] = useState(value);
@@ -33,28 +33,21 @@ const Textfield = ({
     <div className={`textfield ${disabled ? "textfield--state-disabled" : ""}`}>
       <label
         htmlFor={id}
-        className={`textfield__label ${
-          hasError(subtext) ? "textfield__label--state-error" : ""
-        } ${hasSuccess(subtext) ? "textfield__label--state-success" : ""}`}
+        className={`textfield__label 
+          textfield__label--state-${subtext.type}`}
       >
         {label}
       </label>
 
       <div
-        style={{ width: size }}
-        className={`textfield__container  ${
-          hasError(subtext) ? "textfield__container--state-error" : ""
-        } ${hasSuccess(subtext) ? "textfield__container--state-success" : ""}`}
+        className={`textfield__container
+          textfield__container--state-${subtext.type}`}
       >
         <input
           id={id}
-          className={`textfield__container__input ${
-            hasError(subtext) ? "textfield__container__input--state-error" : ""
-          } ${
-            hasSuccess(subtext)
-              ? "textfield__container__input--state-success"
-              : ""
-          }`}
+          className={`textfield__container__input
+            textfield__container__input--state-${subtext.type}
+            textfield__container__input--size-${size}`}
           placeholder={placeholder}
           disabled={disabled}
           value={inputValue}
@@ -69,36 +62,16 @@ const Textfield = ({
         ) : null}
       </div>
 
-      {hasHelp(subtext) ? (
-        <p className="textfield__subtext">{subtext.help}</p>
-      ) : null}
-
-      {hasError(subtext) ? (
-        <p className="textfield__subtext textfield__subtext--state-error">
-          {subtext.error}
-        </p>
-      ) : null}
-
-      {hasSuccess(subtext) ? (
-        <p className="textfield__subtext textfield__subtext--state-success">
-          {subtext.success}
-        </p>
-      ) : null}
+      <p
+        className={`textfield__subtext
+          textfield__subtext--state-${subtext.type} 
+          textfield__subtext--size-${size}`}
+      >
+        {subtext.msg}
+      </p>
     </div>
   );
 };
-
-function hasHelp(subtext) {
-  return Object.keys(subtext).includes("help");
-}
-
-function hasError(subtext) {
-  return Object.keys(subtext).includes("error");
-}
-
-function hasSuccess(subtext) {
-  return Object.keys(subtext).includes("success");
-}
 
 Textfield.propTypes = proptypes;
 

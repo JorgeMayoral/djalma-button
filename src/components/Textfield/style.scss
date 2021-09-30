@@ -20,6 +20,14 @@
     &--state-success {
       color: $color-success-700;
     }
+
+    &--size-small {
+      @include primary-S-regular;
+    }
+
+    &--size-large {
+      @include primary-L-regular;
+    }
   }
 
   &__container {
@@ -76,6 +84,14 @@
           outline: none;
           color: $color-success-700;
         }
+      }
+
+      &--size-small {
+        @include primary-S-regular;
+      }
+
+      &--size-large {
+        @include primary-L-regular;
       }
     }
 
@@ -136,6 +152,16 @@
 
     &--state-success {
       color: $color-success-700;
+    }
+
+    &--size-small {
+      @include primary-XS-regular;
+      height: 1.6rem;
+    }
+
+    &--size-large {
+      @include primary-M-regular;
+      height: 2.4rem;
     }
   }
 }
