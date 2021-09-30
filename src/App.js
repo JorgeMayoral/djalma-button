@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ButtonPrimary from "./components/ButtonPrimary";
 import ButtonSecondary from "./components/ButtonSecondary";
+import Textfield from "./components/Textfield";
 import "./styles/main.scss";
 
 function App() {
@@ -60,6 +61,33 @@ function App() {
         destructive
         disabled
         onClick={handleClick}
+      />
+
+      <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>Textfield</h2>
+      <Textfield
+        id="textfield1"
+        label="Label"
+        placeholder="e.g. Text"
+        helpText="This would be some help text"
+        info
+      />
+      <Textfield
+        id="textfield1"
+        label="Disabled"
+        placeholder="e.g. Text"
+        disabled
+      />
+      <Textfield
+        id="textfield1"
+        label="Error"
+        placeholder="e.g. Text"
+        errorText="This would be some error text"
+      />
+      <Textfield
+        id="textfield1"
+        label="Success"
+        successText="This would be some success text"
+        value="Success"
       />
     </div>
   );
