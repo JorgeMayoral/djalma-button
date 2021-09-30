@@ -89,6 +89,14 @@ function App() {
         successText="This would be some success text"
         value="Success"
       />
+      <Textfield
+        id="textfield5"
+        label="Large"
+        placeholder="e.g. Text"
+        helpText="This would be some help text"
+        info
+        size="50rem"
+      />
     </div>
   );
 }

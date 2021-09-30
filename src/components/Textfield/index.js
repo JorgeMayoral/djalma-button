@@ -12,6 +12,7 @@ const proptypes = {
   disabled: PropTypes.bool,
   info: PropTypes.bool,
   value: PropTypes.string,
+  size: PropTypes.string,
 };
 
 const Textfield = ({
@@ -24,6 +25,7 @@ const Textfield = ({
   disabled,
   info,
   value,
+  size = "30rem",
 }) => {
   const [inputValue, setInputValue] = useState(value);
 
@@ -41,7 +43,9 @@ const Textfield = ({
       >
         {label}
       </label>
+
       <div
+        style={{ width: size }}
         className={`textfield__container  ${
           errorText ? "textfield__container--state-error" : ""
         } ${successText ? "textfield__container--state-success" : ""}`}
@@ -64,12 +68,14 @@ const Textfield = ({
           />
         ) : null}
       </div>
+
       {helpText ? <p className="textfield__subtext">{helpText}</p> : null}
       {errorText ? (
         <p className="textfield__subtext textfield__subtext--state-error">
           {errorText}
         </p>
       ) : null}
+
       {successText ? (
         <p className="textfield__subtext textfield__subtext--state-success">
           {successText}
