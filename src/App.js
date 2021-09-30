@@ -6,9 +6,18 @@ import "./styles/main.scss";
 
 function App() {
   const [counter, setCounter] = useState(0);
+  const [errorMsg, setErrorMsg] = useState({});
 
   const handleClick = () => {
     setCounter((prev) => prev + 1);
+  };
+
+  const handleSetError = () => {
+    if (errorMsg.msg) {
+      setErrorMsg({});
+    } else {
+      setErrorMsg({ type: "error", msg: "Some error" });
+    }
   };
 
   return (
@@ -68,7 +77,7 @@ function App() {
         id="textfield1"
         label="Label"
         placeholder="e.g. Text"
-        helpText="This would be some help text"
+        subtext={{ type: "help", msg: "This would be some help text" }}
         info
       />
       <Textfield
@@ -77,25 +86,42 @@ function App() {
         placeholder="e.g. Text"
         disabled
       />
+      <ButtonPrimary label="Set Error" onClick={handleSetError} />
       <Textfield
         id="textfield3"
         label="Error"
         placeholder="e.g. Text"
-        errorText="This would be some error text"
+        subtext={errorMsg}
       />
       <Textfield
         id="textfield4"
         label="Success"
-        successText="This would be some success text"
+        subtext={{ type: "success", msg: "This would be some success text" }}
         value="Success"
       />
       <Textfield
         id="textfield5"
+        label="Small"
+        placeholder="e.g. Text"
+        subtext={{ type: "help", msg: "This would be some help text" }}
+        info
+        size="small"
+      />
+      <Textfield
+        id="textfield6"
+        label="Medium"
+        placeholder="e.g. Text"
+        subtext={{ type: "help", msg: "This would be some help text" }}
+        info
+        size="medium"
+      />
+      <Textfield
+        id="textfield7"
         label="Large"
         placeholder="e.g. Text"
-        helpText="This would be some help text"
+        subtext={{ type: "help", msg: "This would be some help text" }}
         info
-        size="50rem"
+        size="large"
       />
     </div>
   );
