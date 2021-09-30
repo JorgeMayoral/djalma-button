@@ -72,19 +72,19 @@ function App() {
         info
       />
       <Textfield
-        id="textfield1"
+        id="textfield2"
         label="Disabled"
         placeholder="e.g. Text"
         disabled
       />
       <Textfield
-        id="textfield1"
+        id="textfield3"
         label="Error"
         placeholder="e.g. Text"
         errorText="This would be some error text"
       />
       <Textfield
-        id="textfield1"
+        id="textfield4"
         label="Success"
         successText="This would be some success text"
         value="Success"
