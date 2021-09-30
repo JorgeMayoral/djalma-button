@@ -22,11 +22,11 @@
     }
 
     &--size-small {
-      @include primary-S-regular;
+      @include primary-S-bold;
     }
 
     &--size-large {
-      @include primary-L-regular;
+      @include primary-L-bold;
     }
   }
 
