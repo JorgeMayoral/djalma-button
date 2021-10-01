@@ -2,6 +2,7 @@ import { useState } from "react";
 import ButtonPrimary from "./components/ButtonPrimary";
 import ButtonSecondary from "./components/ButtonSecondary";
 import Textfield from "./components/Textfield";
+import Tooltip from "./components/Tooltip";
 import "./styles/main.scss";
 
 function App() {
