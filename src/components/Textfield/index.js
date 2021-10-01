@@ -8,7 +8,7 @@ const proptypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
-  info: PropTypes.bool,
+  info: PropTypes.string,
   value: PropTypes.string,
   size: PropTypes.string,
   subtext: PropTypes.object,
@@ -56,7 +56,7 @@ const Textfield = ({
         />
         {info ? (
           <div className="textfield__container__icon">
-            <Tooltip text="info">
+            <Tooltip text={info}>
               <Icon icon="icon-info" color="#594794" size="2.4rem" />
             </Tooltip>
           </div>

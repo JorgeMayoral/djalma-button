@@ -2,7 +2,6 @@ import { useState } from "react";
 import ButtonPrimary from "./components/ButtonPrimary";
 import ButtonSecondary from "./components/ButtonSecondary";
 import Textfield from "./components/Textfield";
-import Tooltip from "./components/Tooltip";
 import "./styles/main.scss";
 
 function App() {
@@ -79,7 +78,7 @@ function App() {
         label="Label"
         placeholder="e.g. Text"
         subtext={{ type: "help", msg: "This would be some help text" }}
-        info
+        info="Info text"
       />
       <Textfield
         id="textfield2"
@@ -105,7 +104,7 @@ function App() {
         label="Small"
         placeholder="e.g. Text"
         subtext={{ type: "help", msg: "This would be some help text" }}
-        info
+        info="Info text"
         size="small"
       />
       <Textfield
@@ -113,7 +112,7 @@ function App() {
         label="Medium"
         placeholder="e.g. Text"
         subtext={{ type: "help", msg: "This would be some help text" }}
-        info
+        info="Info text"
         size="medium"
       />
       <Textfield
@@ -121,7 +120,7 @@ function App() {
         label="Large"
         placeholder="e.g. Text"
         subtext={{ type: "help", msg: "This would be some help text" }}
-        info
+        info="Info text"
         size="large"
       />
     </div>
