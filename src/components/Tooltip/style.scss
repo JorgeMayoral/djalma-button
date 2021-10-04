@@ -23,6 +23,9 @@
     flex-grow: 0;
     margin: 0rem 0rem;
 
+    &__arrow {
+    }
+
     &__text {
       @include primary-S-regular;
 

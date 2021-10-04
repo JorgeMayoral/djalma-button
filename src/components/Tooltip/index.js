@@ -17,11 +17,13 @@ const Tooltip = ({ direction, text, children }) => {
     <div
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
+      ref={tooltipRef}
     >
       {children}
       {isVisible && (
-        <div className="tooltip" ref={tooltipRef}>
+        <div className="tooltip">
           <div className="tooltip__container">
+            <span className="tooltip__container__arrow" />
             <p className="tooltip__container__text">{text}</p>
           </div>
         </div>
