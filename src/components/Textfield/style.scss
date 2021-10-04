@@ -99,7 +99,7 @@
       outline: 0.4rem solid $color-neutral-50;
     }
 
-    &:focus {
+    &--state-focus {
       color: $color-neutral-900;
       border: 0.1rem solid $color-accent-500;
       outline: 0.4rem solid $color-accent-50;

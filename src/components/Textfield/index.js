@@ -25,6 +25,8 @@ const Textfield = ({
   subtext = {},
   onChange = () => {},
 }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
   const handleInputChange = (ev) => {
     onChange(ev.target.value);
   };
@@ -42,7 +44,8 @@ const Textfield = ({
 
       <div
         className={`textfield__container
-          textfield__container--state-${subtext.type}`}
+          textfield__container--state-${subtext.type}
+          ${isFocused && "textfield__container--state-focus"}`}
       >
         <input
           id={id}
@@ -51,8 +54,10 @@ const Textfield = ({
             textfield__container__input--size-${size}`}
           placeholder={placeholder}
           disabled={disabled}
-          value={value}
+          defaultValue={value}
           onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
         />
         {info ? (
           <Icon
