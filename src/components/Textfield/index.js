@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Icon from "../Icon";
+import Tooltip from "../Tooltip";
 
 const proptypes = {
   id: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
-  info: PropTypes.bool,
+  info: PropTypes.string,
   value: PropTypes.string,
   size: PropTypes.string,
   subtext: PropTypes.object,
@@ -55,11 +56,11 @@ const Textfield = ({
           onChange={handleInputChange}
         />
         {info ? (
-          <Icon
-            icon="icon-info textfield__container__icon"
-            color="#594794"
-            size="2.4rem"
-          />
+          <div className="textfield__container__icon">
+            <Tooltip text={info}>
+              <Icon icon="icon-info" color="#594794" size="2.4rem" />
+            </Tooltip>
+          </div>
         ) : null}
       </div>
 
