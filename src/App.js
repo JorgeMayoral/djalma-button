@@ -1,12 +1,24 @@
 import { useState } from "react";
 import ButtonPrimary from "./components/ButtonPrimary";
 import ButtonSecondary from "./components/ButtonSecondary";
+import SelectSimple from "./components/SelectSimple";
+import SelectSimpleOptionGroup from "./components/SelectSimpleOptionGroup";
 import Textfield from "./components/Textfield";
+import SelectSimpleOption from "./components/SelectSimpleOption";
 import "./styles/main.scss";
 
 function App() {
   const [counter, setCounter] = useState(0);
   const [errorMsg, setErrorMsg] = useState({});
+  const [selectValue, setSelectValue] = useState("");
+
+  const selectOptions = [
+    "Option 1",
+    "Option 2",
+    "Option 3",
+    "Option 4",
+    "Option 5",
+  ];
 
   const handleClick = () => {
     setCounter((prev) => prev + 1);
@@ -31,7 +43,7 @@ function App() {
         gap: "1rem",
       }}
     >
-      <h1 style={{ fontSize: "5rem" }}>{counter}</h1>
+      {/*<h1 style={{ fontSize: "5rem" }}>{counter}</h1>
 
       <h2 style={{ fontSize: "2rem" }}>Primary Buttons</h2>
       <ButtonPrimary label="Button" onClick={handleClick} />
@@ -122,6 +134,21 @@ function App() {
         subtext={{ type: "help", msg: "This would be some help text" }}
         info="Info text"
         size="large"
+    />*/}
+
+      <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>Select</h2>
+      <h1 style={{ fontSize: "5rem" }}>{selectValue}</h1>
+      <SelectSimple
+        label="Select Simple"
+        options={selectOptions}
+        subtext={{ type: "help", msg: "This would be some help text" }}
+        value={selectValue}
+        onChange={(value) => setSelectValue(value)}
+      />
+      <SelectSimple
+        label="Select Simple Error"
+        options={selectOptions}
+        subtext={{ type: "error", msg: "This would be some error text" }}
       />
     </div>
   );
