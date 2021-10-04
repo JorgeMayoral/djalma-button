@@ -43,7 +43,7 @@ function App() {
         gap: "1rem",
       }}
     >
-      {/*<h1 style={{ fontSize: "5rem" }}>{counter}</h1>
+      <h1 style={{ fontSize: "5rem" }}>{counter}</h1>
 
       <h2 style={{ fontSize: "2rem" }}>Primary Buttons</h2>
       <ButtonPrimary label="Button" onClick={handleClick} />
@@ -134,7 +134,7 @@ function App() {
         subtext={{ type: "help", msg: "This would be some help text" }}
         info="Info text"
         size="large"
-    />*/}
+      />
 
       <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>Select</h2>
       <h1 style={{ fontSize: "5rem" }}>{selectValue}</h1>
