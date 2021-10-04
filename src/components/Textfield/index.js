@@ -12,6 +12,7 @@ const proptypes = {
   value: PropTypes.string,
   size: PropTypes.string,
   subtext: PropTypes.object,
+  onChange: PropTypes.func,
 };
 
 const Textfield = ({
@@ -23,11 +24,10 @@ const Textfield = ({
   value,
   size = "medium",
   subtext = {},
+  onChange = () => {},
 }) => {
-  const [inputValue, setInputValue] = useState(value);
-
   const handleInputChange = (ev) => {
-    setInputValue(ev.target.value);
+    onChange(ev.target.value);
   };
 
   return (
@@ -52,7 +52,7 @@ const Textfield = ({
             textfield__container__input--size-${size}`}
           placeholder={placeholder}
           disabled={disabled}
-          value={inputValue}
+          value={value}
           onChange={handleInputChange}
         />
         {info ? (
