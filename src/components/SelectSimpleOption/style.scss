@@ -1,0 +1,25 @@
+.select-simple-option {
+  background: white;
+
+  @include primary-M-regular;
+  color: $color-neutral-900;
+
+  cursor: pointer;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  padding: 0.5rem 1rem;
+
+  border-bottom: 0.1rem solid $color-neutral-50;
+
+  &:hover {
+    background: $color-neutral-50;
+  }
+
+  &:active {
+    background: $color-accent-50;
+
+    color: $color-accent-500;
+  }
+}
