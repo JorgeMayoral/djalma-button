@@ -64,15 +64,15 @@ const SelectSimple = ({
           icon={dropdownOpen ? "icon-dismiss" : "icon-caret-down"}
         />
       </div>
-      {dropdownOpen && (
-        <SelectSimpleOptionGroup options={options} onSelect={handleSelect} />
-      )}
       {subtext.msg && (
         <p
           className={`select-simple__subtext select-simple__subtext--${subtext.type}`}
         >
           {subtext.msg}
         </p>
+      )}
+      {dropdownOpen && (
+        <SelectSimpleOptionGroup options={options} onSelect={handleSelect} />
       )}
     </div>
   );

@@ -1,7 +1,16 @@
 .select-simple {
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0rem;
+
+  position: relative;
+
+  flex-grow: 1;
 
   &__container {
+    cursor: pointer;
+
     background: white;
 
     border: 0.1rem solid $color-neutral-100;
@@ -14,7 +23,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 0.75rem 1rem;
+    padding: 1.2rem 1.6rem;
 
     &__text {
       @include primary-M-regular;
@@ -37,7 +46,6 @@
 
       flex: none;
       flex-grow: 0;
-      margin: 0rem 0.4rem;
     }
 
     &__icon {
@@ -64,6 +72,8 @@
     @include primary-M-bold;
     color: $color-neutral-900;
 
+    padding-bottom: 0.2rem;
+
     &--error {
       color: $color-error-500;
     }
@@ -74,6 +84,8 @@
     color: $color-neutral-500;
 
     height: 2rem;
+
+    padding-top: 0.4rem;
 
     &--error {
       color: $color-error-500;
