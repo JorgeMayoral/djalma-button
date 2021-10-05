@@ -1,12 +1,19 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SelectSimpleOptionGroup from "../SelectSimpleOptionGroup";
 import Icon from "../Icon";
 
 const proptypes = {
   id: PropTypes.string,
   label: PropTypes.string,
-  options: PropTypes.array,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        .isRequired,
+      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        .isRequired,
+    })
+  ),
   placeholder: PropTypes.string,
   subtext: PropTypes.object,
   disabled: PropTypes.bool,
@@ -25,6 +32,24 @@ const SelectSimple = ({
 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const ref = useRef();
+
+  useEffect(() => {
+    const closeOptions = (e) => {
+      if (dropdownOpen && ref.current && !ref.current.contains(e.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    if (dropdownOpen) {
+      document.addEventListener("click", closeOptions);
+    }
+
+    return () => {
+      document.removeEventListener("click", closeOptions);
+    };
+  }, [dropdownOpen]);
+
   const handleDropdownOpen = () => {
     if (!disabled) {
       setDropdownOpen((prev) => !prev);
@@ -37,7 +62,7 @@ const SelectSimple = ({
   };
 
   return (
-    <div className="select-simple">
+    <div className="select-simple" ref={ref}>
       <label
         htmlFor={id}
         className={`select-simple__label select-simple__label--${subtext.type}`}
@@ -52,7 +77,7 @@ const SelectSimple = ({
           <p
             className={`select-simple__container__text select-simple__container__text--${subtext.type}`}
           >
-            {value}
+            {value.label}
           </p>
         ) : (
           <p className="select-simple__container__placeholder">
