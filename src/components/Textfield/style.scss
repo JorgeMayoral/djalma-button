@@ -30,6 +30,8 @@
     &--size-large {
       @include primary-L-bold;
     }
+
+    padding-bottom: 0.2rem;
   }
 
   &__container {
@@ -47,6 +49,8 @@
     box-shadow: 0rem 0.4rem 0.8rem -0.8rem black;
     border-radius: 0.8rem;
 
+    padding: 1.2rem 1.6rem;
+
     &__input {
       background: transparent;
       border: none;
@@ -54,8 +58,6 @@
       @include primary-M-regular;
 
       color: $color-neutral-500;
-
-      padding: 1rem 0.75rem;
 
       &::placeholder {
         color: $color-neutral-300;
@@ -137,7 +139,6 @@
 
     &__icon {
       justify-self: flex-end;
-      padding-right: 0.5rem;
     }
   }
 
@@ -165,5 +166,7 @@
       @include primary-M-regular;
       height: 2.4rem;
     }
+
+    padding-top: 0.4rem;
   }
 }
