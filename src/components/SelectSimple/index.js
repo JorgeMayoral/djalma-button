@@ -15,9 +15,15 @@ const proptypes = {
     })
   ),
   placeholder: PropTypes.string,
-  subtext: PropTypes.object,
+  subtext: PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    msg: PropTypes.string.isRequired,
+  }),
   disabled: PropTypes.bool,
-  value: PropTypes.any,
+  value: PropTypes.shape({
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  }),
   onChange: PropTypes.func,
 };
 
