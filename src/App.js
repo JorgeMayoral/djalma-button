@@ -2,9 +2,7 @@ import { useState } from "react";
 import ButtonPrimary from "./components/ButtonPrimary";
 import ButtonSecondary from "./components/ButtonSecondary";
 import SelectSimple from "./components/SelectSimple";
-import SelectSimpleOptionGroup from "./components/SelectSimpleOptionGroup";
 import Textfield from "./components/Textfield";
-import SelectSimpleOption from "./components/SelectSimpleOption";
 import "./styles/main.scss";
 
 function App() {
@@ -13,11 +11,11 @@ function App() {
   const [selectValue, setSelectValue] = useState("");
 
   const selectOptions = [
-    "Option 1",
-    "Option 2",
-    "Option 3",
-    "Option 4",
-    "Option 5",
+    { value: 1, label: "Option 1" },
+    { value: 2, label: "Option 2" },
+    { value: 3, label: "Option 3" },
+    { value: 4, label: "Option 4" },
+    { value: 5, label: "Option 5" },
   ];
 
   const handleClick = () => {
@@ -137,7 +135,7 @@ function App() {
       />
 
       <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>Select</h2>
-      <h1 style={{ fontSize: "5rem" }}>{selectValue}</h1>
+      <h1 style={{ fontSize: "5rem" }}>{selectValue.value}</h1>
       <SelectSimple
         label="Select Simple"
         options={selectOptions}
