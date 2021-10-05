@@ -97,7 +97,11 @@ const SelectSimple = ({
         </p>
       )}
       {dropdownOpen && (
-        <SelectSimpleOptionGroup options={options} onSelect={handleSelect} />
+        <SelectSimpleOptionGroup
+          options={options}
+          onSelect={handleSelect}
+          selected={value.value}
+        />
       )}
     </div>
   );
