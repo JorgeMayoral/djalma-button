@@ -1,4 +1,8 @@
 .select-simple-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background: white;
 
   @include primary-M-regular;
@@ -13,8 +17,16 @@
 
   border-bottom: 0.1rem solid $color-neutral-50;
 
+  &--icon-hidden {
+    visibility: hidden;
+  }
+
   &:hover {
     background: $color-neutral-50;
+
+    .select-simple-option--icon-hidden {
+      visibility: visible;
+    }
   }
 
   &:active {

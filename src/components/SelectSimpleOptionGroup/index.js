@@ -11,13 +11,19 @@ const proptypes = {
     })
   ),
   onSelect: PropTypes.func,
+  selected: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-const SelectSimpleOptionGroup = ({ options, onSelect }) => {
+const SelectSimpleOptionGroup = ({ options, onSelect, selected }) => {
   return (
     <div className="select-simple-option-group">
       {options.map((opt, index) => (
-        <SelectSimpleOption key={index} option={opt} onClick={onSelect} />
+        <SelectSimpleOption
+          key={index}
+          option={opt}
+          onClick={onSelect}
+          isSelected={selected === opt.value}
+        />
       ))}
     </div>
   );
