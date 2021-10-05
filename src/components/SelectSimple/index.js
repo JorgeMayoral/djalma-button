@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SelectSimpleOptionGroup from "../SelectSimpleOptionGroup";
 import Icon from "../Icon";
 
@@ -32,6 +32,24 @@ const SelectSimple = ({
 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const ref = useRef();
+
+  useEffect(() => {
+    const closeOptions = (e) => {
+      if (dropdownOpen && ref.current && !ref.current.contains(e.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    if (dropdownOpen) {
+      document.addEventListener("click", closeOptions);
+    }
+
+    return () => {
+      document.removeEventListener("click", closeOptions);
+    };
+  }, [dropdownOpen]);
+
   const handleDropdownOpen = () => {
     if (!disabled) {
       setDropdownOpen((prev) => !prev);
@@ -44,7 +62,7 @@ const SelectSimple = ({
   };
 
   return (
-    <div className="select-simple">
+    <div className="select-simple" ref={ref}>
       <label
         htmlFor={id}
         className={`select-simple__label select-simple__label--${subtext.type}`}
