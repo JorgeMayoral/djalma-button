@@ -6,7 +6,14 @@ import Icon from "../Icon";
 const proptypes = {
   id: PropTypes.string,
   label: PropTypes.string,
-  options: PropTypes.array,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        .isRequired,
+      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        .isRequired,
+    })
+  ),
   placeholder: PropTypes.string,
   subtext: PropTypes.object,
   disabled: PropTypes.bool,
@@ -52,7 +59,7 @@ const SelectSimple = ({
           <p
             className={`select-simple__container__text select-simple__container__text--${subtext.type}`}
           >
-            {value}
+            {value.label}
           </p>
         ) : (
           <p className="select-simple__container__placeholder">
