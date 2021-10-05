@@ -8,7 +8,10 @@ import "./styles/main.scss";
 function App() {
   const [counter, setCounter] = useState(0);
   const [errorMsg, setErrorMsg] = useState({});
-  const [selectValue, setSelectValue] = useState("");
+  const [selectValue, setSelectValue] = useState({
+    value: 3,
+    label: "Option 3",
+  });
 
   const selectOptions = [
     { value: 1, label: "Option 1" },
@@ -147,6 +150,8 @@ function App() {
         label="Select Simple Error"
         options={selectOptions}
         subtext={{ type: "error", msg: "This would be some error text" }}
+        value={selectValue}
+        onChange={(value) => setSelectValue(value)}
       />
     </div>
   );
