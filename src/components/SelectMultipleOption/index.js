@@ -11,15 +11,17 @@ const proptypes = {
   isSelected: PropTypes.bool,
 };
 
-const SelectMultipleOption = ({ onClick, option }) => {
-  const [isSelected, setIsSelected] = useState(false);
+const SelectMultipleOption = ({ onClick, option, isSelected }) => {
+  const handleClick = () => {
+    onClick(option);
+  };
 
   return (
     <div
       className={`select-multiple-option ${
         isSelected ? "select-multiple-option--selected" : ""
       }`}
-      onClick={() => setIsSelected((prev) => !prev)}
+      onClick={handleClick}
     >
       <span
         className={`select-multiple-option__checkbox ${
