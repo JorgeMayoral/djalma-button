@@ -77,7 +77,6 @@ const SelectMultiple = ({
       const newValues = [...value, selectedValue];
       onChange(newValues);
     }
-    setDropdownOpen(false);
   };
 
   return (
