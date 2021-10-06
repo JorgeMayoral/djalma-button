@@ -12,6 +12,7 @@ const proptypes = {
   value: PropTypes.string,
   size: PropTypes.string,
   subtext: PropTypes.object,
+  onChange: PropTypes.func,
 };
 
 const Textfield = ({
@@ -23,11 +24,12 @@ const Textfield = ({
   value,
   size = "medium",
   subtext = {},
+  onChange = () => {},
 }) => {
-  const [inputValue, setInputValue] = useState(value);
+  const [isFocused, setIsFocused] = useState(false);
 
   const handleInputChange = (ev) => {
-    setInputValue(ev.target.value);
+    onChange(ev.target.value);
   };
 
   return (
@@ -35,14 +37,16 @@ const Textfield = ({
       <label
         htmlFor={id}
         className={`textfield__label 
-          textfield__label--state-${subtext.type}`}
+          textfield__label--state-${subtext.type}
+          textfield__label--size-${size}`}
       >
         {label}
       </label>
 
       <div
         className={`textfield__container
-          textfield__container--state-${subtext.type}`}
+          textfield__container--state-${subtext.type}
+          ${isFocused && "textfield__container--state-focus"}`}
       >
         <input
           id={id}
@@ -51,8 +55,10 @@ const Textfield = ({
             textfield__container__input--size-${size}`}
           placeholder={placeholder}
           disabled={disabled}
-          value={inputValue}
+          defaultValue={value}
           onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
         />
         {info ? (
           <div className="textfield__container__icon">
