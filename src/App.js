@@ -4,6 +4,7 @@ import ButtonSecondary from "./components/ButtonSecondary";
 import SelectSimple from "./components/SelectSimple";
 import Textfield from "./components/Textfield";
 import "./styles/main.scss";
+import SelectMultiple from "./components/SelectMultiple";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -12,6 +13,7 @@ function App() {
     value: 3,
     label: "Option 3",
   });
+  const [multipleValues, setMultipleValues] = useState([]);
 
   const selectOptions = [
     { value: 1, label: "Option 1" },
@@ -44,6 +46,7 @@ function App() {
         gap: "1rem",
       }}
     >
+      {/*
       <h1 style={{ fontSize: "5rem" }}>{counter}</h1>
 
       <h2 style={{ fontSize: "2rem" }}>Primary Buttons</h2>
@@ -153,6 +156,16 @@ function App() {
         value={selectValue}
         onChange={(value) => setSelectValue(value)}
       />
+      */}
+
+      <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>Select Multiple</h2>
+      <div style={{ width: "50%" }}>
+        <SelectMultiple
+          value={multipleValues}
+          options={selectOptions}
+          onChange={setMultipleValues}
+        />
+      </div>
     </div>
   );
 }
