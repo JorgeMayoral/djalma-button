@@ -46,7 +46,6 @@ function App() {
         gap: "1rem",
       }}
     >
-      {/*
       <h1 style={{ fontSize: "5rem" }}>{counter}</h1>
 
       <h2 style={{ fontSize: "2rem" }}>Primary Buttons</h2>
@@ -156,7 +155,6 @@ function App() {
         value={selectValue}
         onChange={(value) => setSelectValue(value)}
       />
-      */}
 
       <h2 style={{ fontSize: "2rem", paddingTop: "2rem" }}>Select Multiple</h2>
       <div style={{ width: "50%" }}>
